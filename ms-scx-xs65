@@ -4,7 +4,7 @@ rpm2cpio ./ms-scx-1.0.0-32074.i386.rpm | cpio -idmv
 cp -R ./opt/ /
 cp -f ./libSCXCoreProviderModule.so /opt/xplatproviders/lib/
 chmod +x /opt/xplatproviders/lib/libSCXCoreProviderModule.so
-cp -R ./root#scx/ /opt/openpegasus/repository/
+cp -R ./'root#scx' /opt/openpegasus/repository/
 ln -s /opt/xplatproviders/lib/libSCXCoreProviderModule.so /opt/openpegasus/providers/
 printf '%s\n %s\n' '/opt/xplatproviders/lib' >> /etc/ld.so.conf.d/xs-cim-cmpi.conf
 /sbin/ldconfig
